@@ -1,0 +1,18 @@
+You are given an integer n. You need to check whether the number is a palindrome number or not. Return true if it's a palindrome number, otherwise return false.
+class Solution {
+public:
+    bool isPalindrome(int n) {
+        int i=n;
+        int reverse=0;
+     while(n>0)
+       {
+        int lastdigit=n%10;
+        reverse=reverse*10+lastdigit;
+        n=n/10;
+    }
+    if(i==reverse)
+    return true;
+    else
+    return false;
+    }
+};
